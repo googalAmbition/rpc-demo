@@ -3,6 +3,7 @@ package com.lagou.pojo;
 import java.io.Serializable;
 
 public class User implements Serializable {
+
     private String username;
     private int age;
 

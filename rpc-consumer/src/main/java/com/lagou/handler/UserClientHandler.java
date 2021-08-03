@@ -6,7 +6,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.util.concurrent.Callable;
 
 /**
- *  自定义事件处理器
+ * 自定义事件处理器
  */
 public class UserClientHandler extends ChannelInboundHandlerAdapter implements Callable<Object> {
 
@@ -21,7 +21,6 @@ public class UserClientHandler extends ChannelInboundHandlerAdapter implements C
         //初始化ChannelHandlerContext
         this.context = ctx;
     }
-
 
     //3.实现channelRead 当我们读到服务器数据,该方法自动执行
     @Override
@@ -40,7 +39,7 @@ public class UserClientHandler extends ChannelInboundHandlerAdapter implements C
     }
 
     //5.设置参数的方法
-    public void setParam(String param){
+    public void setParam(String param) {
         this.param = param;
     }
 }

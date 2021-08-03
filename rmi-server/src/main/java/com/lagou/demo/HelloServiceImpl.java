@@ -14,7 +14,7 @@ public class HelloServiceImpl extends UnicastRemoteObject implements IHelloServi
 
     //我们自定义的sayHello
     public String sayHello(User user) throws RemoteException {
-        System.out.println("this is server , say hello to "+user.getUsername());
+        System.out.println("this is server , say hello to " + user.getUsername());
         return "success";
     }
 }

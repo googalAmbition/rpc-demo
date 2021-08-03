@@ -10,6 +10,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
 public class RMIServer {
+
     public static void main(String[] args) throws RemoteException, AlreadyBoundException, MalformedURLException {
         //1.创建HelloService实例
         IHelloService service = new HelloServiceImpl();
@@ -19,6 +20,6 @@ public class RMIServer {
 
         //3.对象的绑定
         //bind方法的参数1:   rmi://ip地址:端口/服务名   参数2:绑定的对象
-        Naming.bind("//127.0.0.1:8888/rmiserver",service);
+        Naming.bind("//127.0.0.1:8888/rmiserver", service);
     }
 }

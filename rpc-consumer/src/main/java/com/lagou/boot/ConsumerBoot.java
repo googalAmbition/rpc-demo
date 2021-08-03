@@ -14,11 +14,10 @@ public class ConsumerBoot {
         IUserService service = (IUserService) RPCConsumer.createProxy(IUserService.class, PROVIDER_NAME);
 
         //2.循环给服务器写数据
-        while (true){
+        while (true) {
             String result = service.sayHello("are you ok !!");
             System.out.println(result);
             Thread.sleep(2000);
         }
-
     }
 }
